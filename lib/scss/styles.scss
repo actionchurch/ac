@@ -1,3 +1,228 @@
+//-- *Resets
+* {box-sizing:border-box; }
+
+a {
+    color:#FFF;
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+body, ul, p {
+    padding:0;
+    margin:0;
+}
+
+//-- Grid
+@import "grid";
+
+//-- $Variables
+
+$radius: 3px;
+$shadow: 0 0px 10px rgba(0,0,0,0.5);
+$gray: #2c2c2c;
+
+//-- %Extends
+
+// Uppercase Small Text
+%text-uppercase-short {
+    color:#FFF;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 18px;
+    letter-spacing: 0.04em;;
+}
+
+// Vertically Align w/ Flexbox
+
+%flex-it {
+    display: flex;
+    align-items: center;
+}
+
+
+
+//-- Layout
 body {
-    background:#FFF;
+    background-color:$gray;
+    background-image: url(../img/background-2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    font-family: brandon-grotesque;
+    overflow-x:hidden; //hide tagline overflow
+}
+
+.container {
+    margin-bottom: 80px;
+}
+
+//-- Type
+h1, .h1 {
+    color: #FFF;
+    font-size:46px;
+    line-height: 52px;
+    margin: 0 0 20px;
+}
+
+//-- Header
+
+.header {
+    @extend %flex-it;
+    justify-content: space-between;
+    padding-top: 50px;
+    margin-bottom: 50px;
+    
+    &__logo {
+        margin-left: 1%;
+    }
+
+    &__nav {
+        margin-right: 1%;
+    }
+}
+
+    //-- Logo
+
+    .logo {    
+        @extend %flex-it;
+        &__mark {
+            width: 80px;
+            margin-right: 10px
+        }
+        &__group {
+            width:220px;
+        }
+            &__text {
+                width: 100%;
+                display: block;
+                margin-bottom: 5px;
+            }
+
+            &__sub-text {
+            @extend %text-uppercase-short;
+            }
+    }
+
+    //-- Nav
+
+    .nav {
+        &__list {
+            &-item {
+                @extend %text-uppercase-short;
+                display: inline-block;
+                margin-left: 30px
+            }
+        }
+    }
+
+//-- Tagline
+
+.tagline {
+    //margin-top: -70px;
+    
+    &__img {
+        width: 150vw;
+    }
+}
+
+//-- Intro
+
+.intro {    
+    &__block {
+        font-size: 0; //resets spacing around btns
+
+        h1 {
+            margin-bottom: 40px;
+        }
+        .btn {
+            margin-right: 20px;
+        }
+    }
+
+    &__highlight {
+        padding: 20px 20px 0;
+        border-radius: $radius;
+        background:rgba(0,0,0,0.5);
+    }
+
+        &__sub-text {
+            @extend %text-uppercase-short;
+            margin: 8px 0;
+            font-size:13px;
+            text-align:center;
+        }
+}
+
+//-- Feed
+
+.feed {
+    h2 {
+        //text-align: right;
+    }
+    #instafeed {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+    }
+
+    &__effect {
+        display: block;
+        border-radius: $radius;
+        overflow: hidden;
+        box-shadow: $shadow;
+        background-size: cover;
+        background-position: center;
+
+        #instafeed & {
+            flex: none;
+        }
+    }
+}
+
+//-- Buttons
+
+.btn {
+    @extend %text-uppercase-short;
+    display: inline-block;
+    padding: 10px 30px;
+    border-radius: $radius;
+    
+    &--ghost {
+        border:3px solid #FFF;
+        transition: all ease-in-out 0.1s;
+
+        &:hover {
+            color:$gray;
+            text-decoration: none;
+            background:#FFF;
+        }
+    }
+}
+
+
+.video-player {
+    position:relative;
+    width:100%;
+    height:0;
+    padding-top:56.25%;
+    
+    overflow: hidden;
+    border-radius: $radius;
+    box-shadow: $shadow;
+
+    &__iframe {
+        position:absolute;
+        top:0;
+        left:0;
+        width:100%;
+        height:100%;
+        
+    }
 }

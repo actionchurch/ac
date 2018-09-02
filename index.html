@@ -7,8 +7,54 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <link rel="stylesheet" href="lib/css/styles.css">
+        <link rel="stylesheet" href="https://use.typekit.net/ynp1vol.css">
+
+        <script type="text/javascript" src="lib/plugins/instafeed.min.js"></script>
+        <script type="text/javascript" src="lib/js/script.js"></script>
     </head>
     <body>
-        <h1>Hello world</h1>
+        <header class="header container">
+            <a href="#" class="header__logo logo">
+                <img class="logo__mark" src="lib/img/cog.svg" alt="actionchurch cog" />
+                <span class="logo__group">
+                    <img class="logo__text"src="lib/img/ac-logo.svg" alt="actionchurch" />
+                    <span class="logo__sub-text">Sundays at 10:30am</span>
+                </span>
+            </a>
+            <nav class="header__nav nav">
+                <ul class="nav__list">
+                    <li class="nav__list-item"><a href="#">Manifesto</a></li>
+                    <li class="nav__list-item"><a href="sermons.html">Sermons</a></li>
+                    <li class="nav__list-item"><a href="#">Contact</a></li>
+                    <li class="nav__list-item"><a href="#">Give</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="tagline container">
+            <div class="row">
+                    <img class="tagline__img" src="lib/img/tagline.svg" alt="love God love people take action" />
+            </div>
+        </div>
+        <div class="intro container">
+            <div class="row">
+                <div class="intro__block col-8">
+                    <h1>A York County church that allows you to explore the teachings of Jesus without uninvited expectations or pressure.</h1>
+                    <a href="#" class="btn btn--ghost">What to Expect</a>
+                    <a href="sermons.html" class="btn btn--ghost">Past Sermons</a>
+                </div>
+                <div class="intro__highlight col-4">
+                    <div class="video-player">
+                        <iframe class="video-player__iframe" src="https://subsplash.com/+841f/embed/mi/*?video&audio&embeddable&shareable&logoWatermark"frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                    </div>
+                    <p class="intro__sub-text">Latest Sermon</p>
+                </div>
+            </div>
+        </div>
+        <div class="feed container">
+            <div class="row">
+                <h2 class="h1 col-12">The Latest</h2>
+            </div>
+            <div id="instafeed" class="row"></div>
+        </div>
     </body>
 </html>
