@@ -135,6 +135,7 @@ body {
   background-image: url(../img/background-2.jpg);
   background-repeat: no-repeat;
   background-size: 100%;
+  background-position: 0 -100px;
   font-family: brandon-grotesque;
   overflow-x: hidden; }
 
@@ -147,10 +148,21 @@ h1, .h1 {
   line-height: 52px;
   margin: 0 0 20px; }
 
+.tagline {
+  margin-top: -75px;
+  margin-bottom: -0px !important; }
+  .tagline--bottom {
+    margin-top: 0; }
+    .tagline--bottom .tagline__img {
+      float: right; }
+  .tagline__img {
+    width: 142vw;
+    margin: 0 1%; }
+
 .header {
   justify-content: space-between;
-  padding-top: 50px;
-  margin-bottom: 50px; }
+  padding-top: 80px;
+  margin-bottom: 60px; }
   .header__logo {
     margin-left: 1%; }
   .header__nav {
@@ -172,9 +184,6 @@ h1, .h1 {
   display: inline-block;
   margin-left: 30px; }
 
-.tagline__img {
-  width: 150vw; }
-
 .intro__block {
   font-size: 0; }
   .intro__block h1 {
@@ -192,11 +201,6 @@ h1, .h1 {
   font-size: 13px;
   text-align: center; }
 
-.feed #instafeed {
-  display: flex;
-  flex-direction: row-reverse;
-  flex-wrap: nowrap; }
-
 .feed__effect {
   display: block;
   border-radius: 3px;
@@ -204,8 +208,8 @@ h1, .h1 {
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
   background-size: cover;
   background-position: center; }
-  #instafeed .feed__effect {
-    flex: none; }
+  .feed__effect:nth-child(2) {
+    display: none; }
 
 .btn {
   display: inline-block;

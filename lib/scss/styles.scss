@@ -55,6 +55,7 @@ body {
     background-image: url(../img/background-2.jpg);
     background-repeat: no-repeat;
     background-size: 100%;
+    background-position: 0 -100px;
     font-family: brandon-grotesque;
     overflow-x:hidden; //hide tagline overflow
 }
@@ -71,13 +72,33 @@ h1, .h1 {
     margin: 0 0 20px;
 }
 
+//-- Tagline
+
+.tagline {
+    margin-top: -75px;
+    margin-bottom: -0px !important;
+    
+    &--bottom {
+        margin-top: 0;
+
+        .tagline__img {
+            float: right;
+        }
+    }
+
+    &__img {
+        width: 142vw;
+        margin: 0 1%;
+    }
+}
+
 //-- Header
 
 .header {
     @extend %flex-it;
     justify-content: space-between;
-    padding-top: 50px;
-    margin-bottom: 50px;
+    padding-top: 80px;
+    margin-bottom: 60px;
     
     &__logo {
         margin-left: 1%;
@@ -122,16 +143,6 @@ h1, .h1 {
         }
     }
 
-//-- Tagline
-
-.tagline {
-    //margin-top: -70px;
-    
-    &__img {
-        width: 150vw;
-    }
-}
-
 //-- Intro
 
 .intro {    
@@ -167,9 +178,7 @@ h1, .h1 {
         //text-align: right;
     }
     #instafeed {
-        display: flex;
-        flex-direction: row-reverse;
-        flex-wrap: nowrap;
+        
     }
 
     &__effect {
@@ -179,9 +188,9 @@ h1, .h1 {
         box-shadow: $shadow;
         background-size: cover;
         background-position: center;
-
-        #instafeed & {
-            flex: none;
+        
+        &:nth-child(2) {
+            display: none;
         }
     }
 }
