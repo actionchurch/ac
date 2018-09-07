@@ -58,6 +58,7 @@ body {
     background-position: 0 -100px;
     font-family: brandon-grotesque;
     overflow-x:hidden; //hide tagline overflow
+    position: relative;
 }
 
 .container {
@@ -75,8 +76,14 @@ h1, .h1 {
 //-- Tagline
 
 .tagline {
-    margin-top: -75px;
+    margin-top: -5vw;
     margin-bottom: -0px !important;
+    
+    &-wrap {
+        overflow: hidden;
+        width: 100%;
+        height: 7vw;
+    }
     
     &--bottom {
         margin-top: 0;
@@ -174,6 +181,7 @@ h1, .h1 {
 //-- Feed
 
 .feed {
+    margin-bottom: 
     h2 {
         //text-align: right;
     }

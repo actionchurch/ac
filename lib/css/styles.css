@@ -137,7 +137,8 @@ body {
   background-size: 100%;
   background-position: 0 -100px;
   font-family: brandon-grotesque;
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  position: relative; }
 
 .container {
   margin-bottom: 80px; }
@@ -149,8 +150,12 @@ h1, .h1 {
   margin: 0 0 20px; }
 
 .tagline {
-  margin-top: -75px;
+  margin-top: -5vw;
   margin-bottom: -0px !important; }
+  .tagline-wrap {
+    overflow: hidden;
+    width: 100%;
+    height: 7vw; }
   .tagline--bottom {
     margin-top: 0; }
     .tagline--bottom .tagline__img {
@@ -201,15 +206,17 @@ h1, .h1 {
   font-size: 13px;
   text-align: center; }
 
-.feed__effect {
-  display: block;
-  border-radius: 3px;
-  overflow: hidden;
-  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
-  background-size: cover;
-  background-position: center; }
-  .feed__effect:nth-child(2) {
-    display: none; }
+.feed {
+  margin-bottom: h2; }
+  .feed__effect {
+    display: block;
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+    background-size: cover;
+    background-position: center; }
+    .feed__effect:nth-child(2) {
+      display: none; }
 
 .btn {
   display: inline-block;
