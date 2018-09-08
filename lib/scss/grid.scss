@@ -80,9 +80,15 @@ $breakpoint-large: 1300px; // 960px
   .col-9 { width: ($width / (12 / 9)) - ($gutter * 3 / 12); }
   .col-10 { width: ($width / (12 / 10)) - ($gutter * 2 / 12); }
   .col-11 { width: ($width / (12 / 11)) - ($gutter * 1 / 12); }
-  .col-12 { width: $width; }
-
+  .col-12 { width: $width;}
+  
   .hidden-sm {
     display: block;
+  }
+
+  .row .col-center {
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
   }
 }

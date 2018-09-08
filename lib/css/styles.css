@@ -117,10 +117,13 @@ body, ul, p {
   .col-12 {
     width: 98%; }
   .hidden-sm {
-    display: block; } }
+    display: block; }
+  .row .col-center {
+    margin-left: auto;
+    margin-right: auto;
+    float: none; } }
 
 .logo__sub-text, .nav__list-item, .intro__sub-text, .btn {
-  color: #FFF;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 18px;
@@ -132,21 +135,25 @@ body, ul, p {
 
 body {
   background-color: #2c2c2c;
-  background-image: url(../img/background-2.jpg);
-  background-repeat: no-repeat;
-  background-size: 100%;
+  color: #FFF;
+  background-image: url(../img/background-2.jpg), url(../img/noise.png);
+  background-repeat: no-repeat, repeat;
+  background-size: 100%, 125px;
   background-position: 0 -100px;
   font-family: brandon-grotesque;
-  overflow-x: hidden;
-  position: relative; }
+  overflow-x: hidden; }
 
 .container {
   margin-bottom: 80px; }
 
 h1, .h1 {
-  color: #FFF;
   font-size: 46px;
   line-height: 52px;
+  margin: 0 0 20px; }
+
+h2, .h2 {
+  font-size: 36px;
+  line-height: 42px;
   margin: 0 0 20px; }
 
 .tagline {
@@ -206,17 +213,18 @@ h1, .h1 {
   font-size: 13px;
   text-align: center; }
 
-.feed {
-  margin-bottom: h2; }
-  .feed__effect {
-    display: block;
-    border-radius: 3px;
-    overflow: hidden;
-    box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
-    background-size: cover;
-    background-position: center; }
-    .feed__effect:nth-child(2) {
-      display: none; }
+.feed__effect {
+  display: block;
+  border-radius: 3px;
+  overflow: hidden;
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.5);
+  background-size: cover;
+  background-position: center; }
+  .feed__effect:nth-child(2) {
+    display: none; }
+
+.attend__text {
+  text-align: center; }
 
 .btn {
   display: inline-block;
@@ -229,6 +237,18 @@ h1, .h1 {
       color: #2c2c2c;
       text-decoration: none;
       background: #FFF; }
+
+.icon {
+  transition: all ease-in-out 0.1s; }
+  .icon svg {
+    float: right;
+    height: 35px;
+    margin-top: 10px;
+    margin-left: 2%;
+    opacity: 0.9; }
+  .icon:hover svg {
+    opacity: 1;
+    transform: scale(1.1); }
 
 .video-player {
   position: relative;
