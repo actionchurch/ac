@@ -155,7 +155,9 @@ h3, .h3 {
 
 h1, .h1 {
   font-size: 46px;
-  line-height: 52px; }
+  line-height: 52px;
+  font-size: 3.1vw;
+  line-height: 3.5vw; }
 
 h2, .h2 {
   font-size: 36px;
@@ -168,24 +170,37 @@ h3, .h3 {
 .tagline {
   margin-top: -5vw;
   margin-bottom: -0px !important; }
+  .tagline__img {
+    width: 180vw;
+    margin: 0 1%; }
+    @media (min-width: 600px) {
+      .tagline__img {
+        width: 142vw; } }
   .tagline-wrap {
     overflow: hidden;
     width: 100%;
-    height: 7vw; }
+    height: 10vw; }
+    @media (min-width: 600px) {
+      .tagline-wrap {
+        height: 7vw; } }
   .tagline--bottom {
     margin-top: 0; }
     .tagline--bottom .tagline__img {
       float: right; }
-  .tagline__img {
-    width: 142vw;
-    margin: 0 1%; }
 
 .header {
   justify-content: space-between;
-  padding-top: 80px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  padding-top: 1vw; }
+  @media (min-width: 700px) {
+    .header {
+      padding-top: 80px; } }
   .header__logo {
     margin-left: 1%; }
+    @media (max-width: 699px) {
+      .header__logo {
+        transform: scale(0.5);
+        transform-origin: 0 0; } }
   .header__nav {
     margin-right: 1%; }
 
@@ -200,6 +215,9 @@ h3, .h3 {
   width: 100%;
   display: block;
   margin-bottom: 5px; }
+
+.logo__sub-text {
+  margin-left: 3px; }
 
 .nav__list-item {
   display: inline-block;
