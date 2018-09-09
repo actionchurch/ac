@@ -121,7 +121,9 @@ body, ul, p {
   .row .col-center {
     margin-left: auto;
     margin-right: auto;
-    float: none; } }
+    float: none; }
+    .row .col-center .row {
+      margin: 0 -1%; } }
 
 .logo__sub-text, .nav__list-item, .intro__sub-text, .btn {
   text-transform: uppercase;
@@ -146,15 +148,22 @@ body {
 .container {
   margin-bottom: 80px; }
 
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin: 0 0 20px; }
+
 h1, .h1 {
   font-size: 46px;
-  line-height: 52px;
-  margin: 0 0 20px; }
+  line-height: 52px; }
 
 h2, .h2 {
   font-size: 36px;
-  line-height: 42px;
-  margin: 0 0 20px; }
+  line-height: 42px; }
+
+h3, .h3 {
+  font-size: 24px;
+  line-height: 30px; }
 
 .tagline {
   margin-top: -5vw;
@@ -198,10 +207,10 @@ h2, .h2 {
 
 .intro__block {
   font-size: 0; }
+  .intro__block > .btn {
+    margin-left: 20px; }
   .intro__block h1 {
     margin-bottom: 40px; }
-  .intro__block .btn {
-    margin-right: 20px; }
 
 .intro__highlight {
   padding: 20px 20px 0;
@@ -223,8 +232,22 @@ h2, .h2 {
   .feed__effect:nth-child(2) {
     display: none; }
 
+.attend__list li {
+  display: block;
+  font-size: 22px;
+  line-height: 26px;
+  margin-bottom: 15px;
+  margin-left: 25px; }
+
+.attend__list svg {
+  height: 20px;
+  margin-left: -30px;
+  margin-right: 5px;
+  position: relative;
+  top: 2px; }
+
 .attend__text {
-  text-align: center; }
+  margin-bottom: 15px; }
 
 .btn {
   display: inline-block;
@@ -237,6 +260,17 @@ h2, .h2 {
       color: #2c2c2c;
       text-decoration: none;
       background: #FFF; }
+  .btn-grouping {
+    display: inline-block;
+    float: left; }
+  .btn-subtext {
+    font-size: 13px;
+    margin-top: 8px;
+    display: block;
+    text-align: center; }
+    .btn-subtext__icon {
+      height: 11px;
+      margin-right: 3px; }
 
 .icon {
   transition: all ease-in-out 0.1s; }

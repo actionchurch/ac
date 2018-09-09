@@ -68,16 +68,26 @@ body {
 }
 
 //-- Type
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+    margin: 0 0 20px;
+}
+
 h1, .h1 {
     font-size:46px;
     line-height: 52px;
-    margin: 0 0 20px;
 }
 
 h2, .h2 {
     font-size:36px;
     line-height: 42px;
-    margin: 0 0 20px;
+}
+
+h3, .h3 {
+    font-size:24px;
+    line-height: 30px;
 }
 
 //-- Tagline
@@ -162,12 +172,11 @@ h2, .h2 {
 .intro {    
     &__block {
         font-size: 0; //resets spacing around btns
-
+        > .btn {
+            margin-left: 20px;
+        }
         h1 {
             margin-bottom: 40px;
-        }
-        .btn {
-            margin-right: 20px;
         }
     }
 
@@ -188,10 +197,6 @@ h2, .h2 {
 //-- Feed
 
 .feed {
-    #instafeed {
-        
-    }
-
     &__effect {
         display: block;
         border-radius: $radius;
@@ -209,9 +214,28 @@ h2, .h2 {
 //-- Attend
 
 .attend {
-    &__text {
-        text-align: center;
+    &__list {
+        li {
+            display: block;
+            font-size:22px;
+            line-height: 26px;
+            margin-bottom: 15px;
+            margin-left: 25px;
+        }
+        svg {
+            height: 20px;
+            margin-left: -30px;
+            margin-right: 5px;
+            position: relative;
+            top:2px;
+        }
     }
+
+    &__text {
+        margin-bottom:15px;
+    }
+
+    
 }
 
 //-- Buttons
@@ -230,6 +254,23 @@ h2, .h2 {
             color:$gray;
             text-decoration: none;
             background:$white;
+        }
+    }
+
+    &-grouping {
+        display: inline-block;
+        float: left;
+    }
+
+    &-subtext {
+        font-size:13px;
+        margin-top: 8px;
+        display: block;
+        text-align: center;
+
+        &__icon {
+            height: 11px;
+            margin-right: 3px;
         }
     }
 }

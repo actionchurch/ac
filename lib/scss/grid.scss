@@ -90,5 +90,6 @@ $breakpoint-large: 1300px; // 960px
     margin-left: auto;
     margin-right: auto;
     float: none;
+    .row {margin: 0 -1%;}
   }
 }
