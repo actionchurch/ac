@@ -10,6 +10,7 @@
         <link rel="stylesheet" href="https://use.typekit.net/ynp1vol.css">
 
         <script type="text/javascript" src="lib/plugins/instafeed.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script type="text/javascript" src="lib/js/script.js"></script>
     </head>
     <body>
@@ -26,7 +27,12 @@
                     <span class="logo__sub-text">Sundays at 10:30am</span>
                 </span>
             </a>
-            <nav class="header__nav nav">
+            <button class="hamburger" type="button">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </button>  
+            <nav class="header__nav nav nav--open">
                 <ul class="nav__list">
                     <li class="nav__list-item"><a href="#">Manifesto</a></li>
                     <li class="nav__list-item"><a href="https://subsplash.com/actionchurch/" target="_blank">Sermons</a></li>
@@ -40,8 +46,8 @@
             <div class="row">
                 <div class="intro__block col-8">
                     <h1>A York County church that allows you to explore the teachings of Jesus without uninvited expectations or pressure.</h1>
-                    
-                    <div class="btn-grouping">
+                        
+                        <div class="btn-grouping">
                         <a href="#attend" class="btn btn--ghost">Attend a service</a>
                         <a href="https://goo.gl/maps/bdAU3W6ndJU2" target="_blank" class="btn-subtext"><svg class="btn-subtext__icon" aria-hidden="true" data-prefix="fas" data-icon="map-marker-alt" class="svg-inline--fa fa-map-marker-alt fa-w-12" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z"></path></svg> 36 W 11th Ave, York, PA 17404</a>
                     </div>

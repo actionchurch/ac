@@ -9,6 +9,9 @@ $white: #FFF;
 $minWidth700: (min-width:700px);
 $maxWidth700: (max-width:699px);
 
+$minWidth1000: (min-width:1000px);
+$maxWidth1000: (max-width:999px);
+
 //-- *Resets
 
 * {box-sizing:border-box; }
@@ -145,7 +148,7 @@ h3, .h3 {
         margin-left: 1%;
 
         @media #{$maxWidth700} {
-            transform: scale(0.5);
+            transform: scale(0.6);
             transform-origin: 0 0;
         }
     }
@@ -182,10 +185,80 @@ h3, .h3 {
 
     .nav {
         &__list {
+            
             &-item {
                 @extend %text-uppercase-short;
-                display: inline-block;
-                margin-left: 30px
+                @media #{$maxWidth1000} {
+                    margin: 0 auto 20px;
+                    font-size: 25px;
+                    display: block;
+                    text-align: center;
+
+                    &:last-child {
+                        margin-bottom: 0;
+                    }
+                }
+                @media #{$minWidth1000} {
+                    display: inline-block;
+                    margin-left: 30px
+                }
+            }
+           
+        }
+        @media #{$maxWidth1000} {
+            display: none;
+            
+            
+            &__list {
+                border: 8px solid $white;
+                border-radius: $radius;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                height: 100%;
+            }
+
+            &--open {
+                display: block;
+                background: $gray url("../img/cog.svg") no-repeat;
+                background-position: 50% 90%;
+                background-size: 80px;
+                position: fixed;
+                padding: 30px;
+                top: 0;
+                left: 0;
+                z-index: 2;
+                width:100%;
+                height: 100%;
+            }
+        }
+    }
+
+    //-- Hamburger
+    .hamburger {
+        background:none;
+        border: none;
+        padding: 10px;
+        z-index: 3;
+        display: none;
+
+        @media #{$maxWidth1000} {
+            display: block;
+        }
+
+        &:focus {
+            outline: none;
+        }
+
+        &__line {
+            height: 4px;
+            margin-bottom: 6px;
+            background: $white;
+            width: 30px;
+            display: block;
+
+            &:last-child {
+                margin-bottom: 0;
             }
         }
     }
