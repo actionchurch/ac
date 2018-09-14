@@ -91,7 +91,7 @@ body, ul, p {
 .col-12-sm {
   width: 98%; }
 
-@media only screen and (min-width: 45em) {
+@media only screen and (min-width: 900px) {
   .col-1 {
     width: 6.3333333333%; }
   .col-2 {
@@ -140,9 +140,15 @@ body {
   color: #FFF;
   background-image: url(../img/background-2.jpg), url(../img/noise.png);
   background-repeat: no-repeat, repeat;
-  background-size: 100%, 125px;
-  background-position: 0 -100px;
-  font-family: brandon-grotesque;
+  background-size: 100%, 11.52%;
+  background-position: center -100px;
+  font-family: brandon-grotesque, sans-serif; }
+  @media (max-width: 699px) {
+    body {
+      background-size: 190%, 21.888%;
+      background-position: center -100px; } }
+
+.body-wrap {
   overflow-x: hidden; }
 
 .container {
@@ -154,10 +160,11 @@ h3, .h3 {
   margin: 0 0 20px; }
 
 h1, .h1 {
-  font-size: 46px;
-  line-height: 52px;
-  font-size: 3.1vw;
-  line-height: 3.5vw; }
+  font-size: 30px;
+  line-height: 1.15em; }
+  @media (min-width: 1000px) {
+    h1, .h1 {
+      font-size: 3.1vw; } }
 
 h2, .h2 {
   font-size: 36px;
@@ -170,17 +177,20 @@ h3, .h3 {
 .tagline {
   margin-top: -5vw;
   margin-bottom: -0px !important; }
+  @media (max-width: 600px) {
+    .tagline {
+      margin-top: -6vw; } }
   .tagline__img {
     width: 180vw;
     margin: 0 1%; }
-    @media (min-width: 600px) {
+    @media (min-width: 599px) {
       .tagline__img {
         width: 142vw; } }
   .tagline-wrap {
     overflow: hidden;
     width: 100%;
     height: 10vw; }
-    @media (min-width: 600px) {
+    @media (min-width: 599px) {
       .tagline-wrap {
         height: 7vw; } }
   .tagline--bottom {
@@ -190,34 +200,42 @@ h3, .h3 {
 
 .header {
   justify-content: space-between;
-  margin-bottom: 60px;
-  padding-top: 1vw; }
+  margin-bottom: 40px;
+  padding-top: 40px; }
   @media (min-width: 700px) {
     .header {
+      margin-bottom: 60px;
       padding-top: 80px; } }
   .header__logo {
     margin-left: 1%; }
-    @media (max-width: 699px) {
-      .header__logo {
-        transform: scale(0.6);
-        transform-origin: 0 0; } }
   .header__nav {
     margin-right: 1%; }
 
 .logo__mark {
-  width: 80px;
-  margin-right: 10px; }
+  width: 45px;
+  margin-right: 2vw; }
 
 .logo__group {
-  width: 220px; }
+  width: 160px; }
 
 .logo__text {
   width: 100%;
-  display: block;
-  margin-bottom: 5px; }
+  display: block; }
 
 .logo__sub-text {
-  margin-left: 3px; }
+  font-size: 13px; }
+
+@media (min-width: 599px) {
+  .logo__mark {
+    width: 80px;
+    margin-right: 10px; }
+  .logo__group {
+    width: 220px; }
+  .logo__text {
+    margin-bottom: 4px; }
+  .logo__sub-text {
+    font-size: 16px;
+    margin-left: 3px; } }
 
 @media (max-width: 999px) {
   .nav__list-item {
@@ -268,10 +286,10 @@ h3, .h3 {
   .hamburger:focus {
     outline: none; }
   .hamburger__line {
-    height: 4px;
+    height: 3px;
     margin-bottom: 6px;
     background: #FFF;
-    width: 30px;
+    width: 28px;
     display: block; }
     .hamburger__line:last-child {
       margin-bottom: 0; }
@@ -279,9 +297,23 @@ h3, .h3 {
 .intro__block {
   font-size: 0; }
   .intro__block > .btn {
-    margin-left: 20px; }
-  .intro__block h1 {
-    margin-bottom: 40px; }
+    margin-left: 2%; }
+  @media (min-width: 900px) {
+    .intro__block {
+      margin-top: 150px; } }
+
+@media (max-width: 600px) {
+  .intro {
+    margin-top: 150px; } }
+
+@media (max-width: 899px) {
+  .intro__btn {
+    width: 49%;
+    display: block;
+    float: none; }
+  .intro .btn {
+    font-size: 15px;
+    line-height: 1.1em; } }
 
 .intro__highlight {
   padding: 20px 20px 0;
@@ -302,6 +334,9 @@ h3, .h3 {
   background-position: center; }
   .feed__effect:nth-child(2) {
     display: none; }
+  @media (max-width: 899px) {
+    .feed__effect:nth-child(5) {
+      clear: left; } }
 
 .attend__list li {
   display: block;
@@ -323,7 +358,8 @@ h3, .h3 {
 .btn {
   display: inline-block;
   padding: 10px 30px;
-  border-radius: 3px; }
+  border-radius: 3px;
+  text-align: center; }
   .btn--ghost {
     border: 3px solid #FFF;
     transition: all ease-in-out 0.1s; }
@@ -334,11 +370,16 @@ h3, .h3 {
   .btn-grouping {
     display: inline-block;
     float: left; }
+    .btn-grouping > .btn {
+      display: block; }
   .btn-subtext {
     font-size: 13px;
     margin-top: 8px;
     display: block;
     text-align: center; }
+    @media (max-width: 699px) {
+      .btn-subtext {
+        width: 200%; } }
     .btn-subtext__icon {
       height: 11px;
       margin-right: 3px; }
