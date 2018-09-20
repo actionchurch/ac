@@ -77,6 +77,10 @@ body {
         background-size: 190%, 21.888%;
         background-position: center -100px;
     }
+
+    &.nav--open {
+        overflow: hidden;
+    }
 }
      //hide tagline overflow
     .body-wrap {
@@ -84,7 +88,11 @@ body {
     }
 
 .container {
-    margin-bottom: 80px;
+    margin-bottom: 20px;
+
+    @media #{$minWidth600} {
+        margin-bottom: 80px;
+    }
 }
 
 //-- Type
@@ -235,6 +243,18 @@ h3, .h3 {
                     display: inline-block;
                     margin-left: 30px
                 }
+
+                &:first-child {
+                    display: none;
+                }
+                //hack social media links
+                &:last-child {
+                    height: 20px;
+
+                    @media (max-width: 1160px) and (min-width: 1000px) {
+                        display: none;
+                    }
+                }
             }
            
         }
@@ -249,13 +269,21 @@ h3, .h3 {
                 flex-direction: column;
                 justify-content: center;
                 height: 100%;
+
+                &-item {
+                    &:first-child {
+                        display: block;
+                    }
+                }
             }
 
-            &--open {
+            &--open & {
                 display: block;
-                background: $gray url("../img/cog.svg") no-repeat;
-                background-position: 50% 90%;
-                background-size: 80px;
+                background-color: $gray;
+                background-image:url("../img/cog.svg"), url(../img/noise.png);
+                background-repeat: no-repeat, repeat;
+                background-position: 50% 10%, 0 0;
+                background-size: 80px,  11.52%;
                 position: fixed;
                 padding: 30px;
                 top: 0;
@@ -263,6 +291,13 @@ h3, .h3 {
                 z-index: 2;
                 width:100%;
                 height: 100%;
+            }
+        }
+
+        @media #{maxWidth600} {
+            //fix noise
+            &--open & {
+                background-size: 80px,  21.888%;
             }
         }
     }
@@ -277,6 +312,12 @@ h3, .h3 {
 
         @media #{$maxWidth1000} {
             display: block;
+        }
+
+        .nav--open &{
+            position:fixed;
+            right: 60px;
+            top:60px;
         }
 
         &:focus {
@@ -310,6 +351,11 @@ h3, .h3 {
     }
     @media #{$maxWidth600} {
         margin-top:150px; 
+    }
+    @media #{$minWidth600} {
+        .btn br{
+            display: none;
+        }
     }
 
     @media #{$maxWidth800} {
@@ -369,26 +415,38 @@ h3, .h3 {
 
 .attend {
     &__list {
+        &-heading {
+            @extend %text-uppercase-short;
+            margin-bottom: 15px;
+        }
         li {
             display: block;
             font-size:22px;
             line-height: 26px;
             margin-bottom: 15px;
-            margin-left: 25px;
+            margin-left: 35px;
         }
         svg {
             height: 20px;
             margin-left: -30px;
-            margin-right: 5px;
             position: relative;
             top:2px;
+            float: left;
         }
     }
-
+    
     &__text {
+        font-size:22px;
+        line-height: 1.5em;
         margin-bottom:15px;
     }
 
+    //hack to add some margin on mobile
+    @media #{$maxWidth800} {
+        .col-5 {
+            margin-top: 40px;
+        }
+    }
     
 }
 
@@ -441,13 +499,22 @@ h3, .h3 {
 //-- Icons
 
 .icon {
+    display: block;
+    float: left;
+    padding:0 10px;
     transition: all ease-in-out 0.1s;
+    margin-top: -2px;
+
+    &:first-child {
+        margin-left:-10px;
+    }
+    &:last-child {
+        margin-right:-10px;
+    }
     svg {
-        float: right;
-        height: 35px;
-        margin-top: 10px;
-        margin-left:2%;
-        opacity:0.9;
+        height: 28px;
+        display: block;
+       
     }
     &:hover svg{
         opacity:1;
